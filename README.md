@@ -20,6 +20,7 @@ Personal AI Coding Tools to Aid Development
   - [Communication](#communication)
   - [Building a Skill](#building-a-skill)
   - [Best Practices](#best-practices)
+  - [Linking Agents into CoPilot](#linking-agents-into-copilot)
 
 ---
 
@@ -111,3 +112,24 @@ system-knowledge/
 ---
 
 For more examples and advanced usage, see the `system-knowledge` folder and other skill directories in this repo.
+
+## Linking Agents into CoPilot
+Each Agent must be individually sym linked (linked by file)
+```
+$ ln -s /Users/adamadair/coding/external/ai-coding-tools/agents/workflow/workflow.agent.md /Users/adamadair/.copilot/agents/workflow.agent.md
+```
+
+Each Skill must be individually sym linked (linked by directory)
+```
+ln -s /Users/adamadair/coding/external/ai-coding-tools/skills/skill-creator /Users/adamadair/.copilot/skills/skill-creator
+```
+
+Adding in a Global copilot-instructions.md file
+```
+$ ln -s /Users/adamadair/coding/external/ai-coding-tools/copilot-instructions.md /Users/adamadair/.copilot/copilot-instructions.md
+``
+
+## Check VSCode CoPilot Settings via - (Mac) - 'Command - Shift - P'`
+```
+@feature:chat instructions
+```
